@@ -39,8 +39,8 @@ bot = Client(
     bot_token=BOT_TOKEN
 )
 
-API_ID    = os.environ.get("API_ID", "")
-API_HASH  = os.environ.get("API_HASH", "")
+API_ID    = os.environ.get("API_ID", "22470912")
+API_HASH  = os.environ.get("API_HASH", "511be78079ed5d4bd4c967bc7b5ee023")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
 # Define aiohttp routes
@@ -68,11 +68,11 @@ import random
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/rajrmahar"),
-            InlineKeyboardButton("✜ Rajesh R Mahar ✜" ,url="https://t.me/rajrmahar"),
+            InlineKeyboardButton("FOLLOW " ,url=""),
+            InlineKeyboardButton("✜ 𝐌𝐫𝐒𝐭𝐫𝐚𝐧𝐠𝐞𝐫™ ✜" ,url=""),
         ],
         [
-            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+ovw8WwlIcWZmYTdl"),
+            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 ✜" ,url=f""),
         ],
     ]
 )
@@ -81,11 +81,11 @@ keyboard = InlineKeyboardMarkup(
 Busy = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("FOLLOW " ,url="https://www.instagram.com/rajrmahar"),
-            InlineKeyboardButton("✜ Rajesh R Mahar ✜" ,url="https://t.me/rajrmahar"),
+            InlineKeyboardButton("FOLLOW " ,url=""),
+            InlineKeyboardButton("✜ 𝐌𝐫𝐒𝐭𝐫𝐚𝐧𝐠𝐞𝐫™ ✜" ,url=""),
         ],
         [
-            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 Group 🥱✜" ,url=f"https://t.me/+ovw8WwlIcWZmYTdl"),
+            InlineKeyboardButton("✜ 𝐉𝐨𝐢𝐧 𝐔𝐩𝐃𝐚𝐭𝐞 ✜" ,url=f""),
         ],
     ]
 )
@@ -111,11 +111,11 @@ async def start_command(bot: Client, message: Message):
     # Caption for the image
     caption = (
         "**𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!**\n\n"
-        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 By Rajesh R Mahar**\n"
+        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 By 𝐌𝐫𝐒𝐭𝐫𝐚𝐧𝐠𝐞𝐫™**\n"
         "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
         "➠ **For Guide Use Command /help 📖**\n\n"
         "➠ **Use /upload Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @rajrmahar"
+        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @Damn_stranger"
     )
 
     # Send the image with caption and buttons
@@ -176,7 +176,7 @@ SUBSCRIPTION_FILE = "subscription_data.txt"
 CHANNELS_FILE = "channels_data.json"
 
 # Admin ID
-YOUR_ADMIN_ID = 1780523256
+YOUR_ADMIN_ID = 7678862761
 
 # Function to read subscription data
 def read_subscription_data():
@@ -259,7 +259,7 @@ async def remove_user(client, message: Message):
     except ValueError:
         await message.reply_text("Invalid command format. Use: /removeuser user_id")
 
-YOUR_ADMIN_ID = 1780523256
+YOUR_ADMIN_ID = 7678862761
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -349,7 +349,7 @@ async def remove_channel(client, message: Message):
     except ValueError:
         await message.reply_text("Invalid command format. Use: /remove_channels <channel_id>")
 
-YOUR_ADMIN_ID = 618670084
+YOUR_ADMIN_ID = 7678862761
 
 # Helper function to check admin privilege
 def is_admin(user_id):
@@ -509,7 +509,7 @@ async def moni_handler(client: Client, m: Message):
     # Default credit message
     credit = "️ ⁪⁬⁮⁮⁮"
     if raw_text3 == '1':
-        CR = '@rajrmahar 💐🕊️'
+        CR = '@Damn_stranger ⭐ 🕊️'
     elif raw_text3:
         CR = raw_text3
     else:
