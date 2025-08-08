@@ -79,7 +79,7 @@ image_urls = [
 
 @bot.on_message(filters.command("addauth") & filters.private)
 async def add_auth_user(client: Client, message: Message):
-    if message.chat.id != OWNER: 7678862761
+    if message.chat.id != OWNER:
         return 
     try:
         new_user_id = int(message.command[1])
@@ -93,7 +93,7 @@ async def add_auth_user(client: Client, message: Message):
 
 @bot.on_message(filters.command("users") & filters.private)
 async def list_auth_users(client: Client, message: Message):
-    if message.chat.id != OWNER: 7678862761
+    if message.chat.id != OWNER:
         return
     
     user_list = '\n'.join(map(str, AUTH_USERS))  # AUTH_USERS ki list dikhayenge
@@ -101,7 +101,7 @@ async def list_auth_users(client: Client, message: Message):
 
 @bot.on_message(filters.command("rmauth") & filters.private)
 async def remove_auth_user(client: Client, message: Message):
-    if message.chat.id != OWNER: 7678862761
+    if message.chat.id != OWNER:
         return
     
     try:
@@ -117,7 +117,7 @@ async def remove_auth_user(client: Client, message: Message):
 
 @bot.on_message(filters.command("broadcast") & filters.private)
 async def broadcast_handler(client: Client, message: Message):
-    if message.chat.id != OWNER: 7678862761
+    if message.chat.id != OWNER:
         return
     if not message.reply_to_message:
         await message.reply_text("**Reply to any message (text, photo, video, or file) with /broadcast to send it to all users.**")
@@ -165,7 +165,7 @@ async def broadcast_handler(client: Client, message: Message):
 
 @bot.on_message(filters.command("broadusers") & filters.private)
 async def broadusers_handler(client: Client, message: Message):
-    if message.chat.id != OWNER: 7678862761
+    if message.chat.id != OWNER:
         return
 
     if not TOTAL_USERS:
@@ -451,7 +451,7 @@ async def getcookies_handler(client: Client, m: Message):
 
 @bot.on_message(filters.command(["reset"]) )
 async def restart_handler(_, m):
-    if m.chat.id != OWNER: 7678862761
+    if m.chat.id != OWNER:
         return
     else:
         await m.reply_text("𝐁𝐨𝐭 𝐢𝐬 𝐑𝐞𝐬𝐞𝐭𝐢𝐧𝐠...", True)
@@ -526,25 +526,25 @@ async def start(bot, m: Message):
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("🕸️ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={7678862761}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
         ])
         
         await start_message.edit_text(
             f"🌟 Welcome {m.from_user.first_name}! 🌟\n\n" +
             f"Great! You are a premium member!\n"
             f"Use button : **✨ Commands** to get started 🌟\n\n"
-            f"If you face any problem contact -  [{CREDIT}⁬](tg://openmessage?user_id={7678862761})\n", disable_web_page_preview=True, reply_markup=keyboard
+            f"If you face any problem contact -  [{CREDIT}⁬](tg://openmessage?user_id={OWNER})\n", disable_web_page_preview=True, reply_markup=keyboard
         )
     else:
         await asyncio.sleep(2)
         keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={7678862761}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
         ])
         await start_message.edit_text(
            f" 🎉 Welcome {m.from_user.first_name} to DRM Bot! 🎉\n\n"
-           f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={7678862761}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
+           f"**You are currently using the free version.** 🆓\n\n<blockquote expandable>I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!</blockquote>\n\n**Want to get started? Press /id**\n\n💬 Contact : [{CREDIT}⁬](tg://openmessage?user_id={OWNER}) to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓\n", disable_web_page_preview=True, reply_markup=keyboard
     )
 
 @bot.on_callback_query(filters.regex("back_to_main_menu"))
@@ -555,7 +555,7 @@ async def back_to_main_menu(client, callback_query):
     keyboard = InlineKeyboardMarkup([
             [InlineKeyboardButton("💎 Features", callback_data="feat_command"), InlineKeyboardButton("✨ Commands", callback_data="cmd_command")],
             [InlineKeyboardButton("💳 Plans", callback_data="upgrade_command")],
-            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={7678862761}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
+            [InlineKeyboardButton(text="📞 Contact", url=f"tg://openmessage?user_id={OWNER}"), InlineKeyboardButton(text="🛠️ Repo", url="https://github.com/nikhilsainiop/saini-txt-direct")],
         ])
     
     await callback_query.message.edit_media(
@@ -673,7 +673,7 @@ async def upgrade_button(client, callback_query):
            f"• 🎓 All Non DRM+AES Encrypted URLs\n"
            f"• 🎓 MPD URLs if the key is known (e.g., Mpd_url?key=key XX:XX)</blockquote>\n\n"
            f"<b>💵 Monthly Plan: 100 INR</b>\n\n"
-           f"If you want to buy membership of the bot, feel free to contact [7678862761](tg://user?id={OWNER})\n"
+           f"If you want to buy membership of the bot, feel free to contact [{OWNER}](tg://user?id={OWNER})\n"
     )  
     
   await callback_query.message.edit_media(
@@ -815,7 +815,7 @@ async def y2t_button(client, callback_query):
          
 @bot.on_message(filters.command(["id"]))
 async def id_command(client, message: Message):
-    keyboard = InlineKeyboardMarkup([[InlineKeyboardButton(text="Send to Owner", url=f"tg://openmessage?user_id=7678862761")]])
+    keyboard = InlineKeyboardMarkup([[InlineKeyboardButton(text="Send to Owner", url=f"tg://openmessage?user_id={OWNER}")]])
     chat_id = message.chat.id
     text = f"<blockquote expandable><b>The ID of this chat id is:</b></blockquote>\n`{chat_id}`"
     
